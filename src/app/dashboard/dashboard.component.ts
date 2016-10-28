@@ -9,6 +9,7 @@ import { Book } from '../shared/book';
 export class DashboardComponent implements OnInit {
   books: Book[];
 
+
   constructor() { }
 
   ngOnInit() {
@@ -16,4 +17,8 @@ export class DashboardComponent implements OnInit {
                   new Book('AngularJS 1', 'obsolete!')];
   }
 
+  reorderBooks(book: Book) {
+    console.log(book);
+    this.books.sort((a, b) => b.rating - a.rating);
+  }
 }

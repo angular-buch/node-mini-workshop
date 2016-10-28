@@ -5,4 +5,12 @@ export class Book {
     public rating = 0,
   ) {
   }
+
+  rateUp() {
+    this.rating++;
+  }
+
+  rateDown() {
+    this.rating--;
+  }
 }
